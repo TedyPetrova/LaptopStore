@@ -62,6 +62,7 @@
       <Button fx:id="deleteLaptopButton" layoutX="193.0" layoutY="361.0" mnemonicParsing="false" onMouseClicked="#deleteLaptop" text="Delete" />
       <Button fx:id="clearSearchLaptops" layoutX="250.0" layoutY="361.0" mnemonicParsing="false" onMouseClicked="#clearSearchLaptops" text="Clear search" />
       <Button fx:id="modifyLaptop" layoutX="338.0" layoutY="361.0" mnemonicParsing="false" onMouseClicked="#modifyLaptopButton" text="Modify column" />
+      <Button fx:id="refreshLaptopsButton" layoutX="444.0" layoutY="361.0" mnemonicParsing="false" onMouseClicked="#populateLaptops" text="Refresh" />
    </children>
    <effect>
       <InnerShadow />

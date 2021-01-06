@@ -36,12 +36,6 @@ public class LogInController {
         System.exit(1);
     }
     public void LogInAdminAction() throws Exception {
-        try {
-            Connection conn = MySQLConnection.getConnection();
-            rs = conn.createStatement().executeQuery("SELECT * FROM administrators");
-        } catch (SQLException exc) {
-            exc.printStackTrace();
-        }
         if(adminUsername_field.getText().equals("Tedy") && adminPass_field.getText().equals("pass")){
             stage = (Stage) LogInAdmin.getScene().getWindow();
             adminStage = FXMLLoader.load(getClass().getResource("SceneAdmin.fxml"));

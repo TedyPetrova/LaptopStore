@@ -21,19 +21,19 @@ import java.sql.Statement;
 import java.util.ResourceBundle;
 
 public class AdminController implements Initializable {
-    @FXML private TableView<LaptopsRows> tableLaptops;
-    @FXML private TableColumn<LaptopsRows, String> col_Product_id;
-    @FXML private TableColumn<LaptopsRows, String> col_Brand;
-    @FXML private TableColumn<LaptopsRows, String> col_Model;
-    @FXML private TableColumn<LaptopsRows, String> col_Processor;
-    @FXML private TableColumn<LaptopsRows, String> col_RAM;
-    @FXML private TableColumn<LaptopsRows, String> col_OS;
-    @FXML private TextField id_field;
-    @FXML private TextField brand_field;
-    @FXML private TextField model_field;
-    @FXML private TextField processor_field;
-    @FXML private TextField RAM_field;
-    @FXML private TextField OS_field;
+    @FXML public TableView<LaptopsRows> tableLaptops;
+    @FXML public TableColumn<LaptopsRows, String> col_Product_id;
+    @FXML public TableColumn<LaptopsRows, String> col_Brand;
+    @FXML public TableColumn<LaptopsRows, String> col_Model;
+    @FXML public TableColumn<LaptopsRows, String> col_Processor;
+    @FXML public TableColumn<LaptopsRows, String> col_RAM;
+    @FXML public TableColumn<LaptopsRows, String> col_OS;
+    @FXML public TextField id_field;
+    @FXML public TextField brand_field;
+    @FXML public TextField model_field;
+    @FXML public TextField processor_field;
+    @FXML public TextField RAM_field;
+    @FXML public TextField OS_field;
     @FXML public TextField searchProductID_field;
     @FXML private Tab orders;
     @FXML private Tab representatives;
@@ -44,7 +44,7 @@ public class AdminController implements Initializable {
     Connection conn;
     int result;
     ResultSet rs;
-    ObservableList<LaptopsRows> laptopsList = FXCollections.observableArrayList();
+    public ObservableList<LaptopsRows> laptopsList = FXCollections.observableArrayList();
     public void logOutAction() throws Exception{
             Stage stage;
             Parent primaryStage;
@@ -100,7 +100,6 @@ public class AdminController implements Initializable {
             conn = MySQLConnection.getConnection();
             Statement stmt = conn.createStatement();
             result = stmt.executeUpdate(sql);
-            // loop through the result set
         } catch (SQLException ex) {
             System.out.println(ex.getMessage());
         }
